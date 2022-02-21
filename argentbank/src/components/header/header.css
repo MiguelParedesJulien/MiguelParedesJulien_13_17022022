@@ -8,6 +8,8 @@
 .mainNav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 .mainNav a.router-link-exact-active {
@@ -20,7 +22,7 @@
 }
 
 .fa-user-circle {
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
 }
 
 .mainNavItem:hover {
@@ -34,5 +36,5 @@
 
 .mainNavLogoImage {
   max-width: 100%;
-  width: 200px;
+  width: 350px;
 }
