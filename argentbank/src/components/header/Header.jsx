@@ -2,7 +2,7 @@ import "components/header/header.css";
 import { connect, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "assets/img/logo/argentBankLogo.png";
-import { logOut } from "utils/features/userSlice";
+import { logOut } from "utils/features/UserSlice";
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
 

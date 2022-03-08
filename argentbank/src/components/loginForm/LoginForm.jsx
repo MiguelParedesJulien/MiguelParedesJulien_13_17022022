@@ -1,9 +1,9 @@
 import ApiProvider from "services/apiProvider/ApiProvider";
 import Button from "components/button/Button";
-import "components/loginForm/LoginForm.css";
-import getLocalStorageKey from "utils/storage/storage";
-import Input from "components/input/input";
-import { logIn } from "utils/features/userSlice";
+import "components/loginForm/loginForm.css";
+import getLocalStorageKey from "utils/storage/Storage";
+import Input from "components/input/Input";
+import { logIn } from "utils/features/UserSlice";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
