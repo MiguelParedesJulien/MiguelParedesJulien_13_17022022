@@ -1,5 +1,6 @@
-form > a {
-  text-decoration: none;
+.errorMessage {
+  color: red;
+  font-weight: 700;
 }
 
 .inputRemember {
@@ -13,15 +14,14 @@ form > a {
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  text-align: left;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .inputWrapper label {
-  font-weight: bold;
+  font-weight: 700;
 }
 
-.inputWrapper input {
-  padding: 5px;
-  font-size: 1.2rem;
+form > a {
+  text-decoration: none;
 }

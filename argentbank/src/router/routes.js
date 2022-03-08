@@ -1,13 +1,13 @@
-import Error from "pages/ErrorPage/Error";
-import HomePage from "pages/HomePage/Homepage";
-import Login from "pages/LoginPage/Login";
-import Profile from "pages/ProfilePage/Profile";
+import Error from "pages/error/Error";
+import Homepage from "pages/homepage/Homepage";
+import Login from "pages/login/Login";
+import Profile from "pages/profile/Profile";
 
 export const routes = [
   {
     path: "/",
     exact: true,
-    component: HomePage,
+    component: Homepage,
   },
   {
     path: "/login",

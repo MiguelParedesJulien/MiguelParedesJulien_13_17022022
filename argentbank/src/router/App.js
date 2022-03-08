@@ -1,31 +1,38 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { connect } from "react-redux";
 import Footer from "components/footer/Footer";
 import Header from "components/header/Header";
-import HomePage from "pages/homepage/Homepage";
 import Login from "pages/login/Login";
-import ProfilePage from "pages/profilePage/ProfilePage";
-import "./app.css";
+import LogInJWT from "utils/storage/LogInJWT";
+import PropTypes from "prop-types";
+import React from "react";
+import { routes, MatchedRoutes, routesApiDocs } from "router/routes";
 
-function App() {
+const App = (props) => {
+  // to establish the path to the API documentation
+  routesApiDocs();
+  // to log in the user using the JWT Token
+  LogInJWT();
+
   return (
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/profile">
-            <ProfilePage />
-          </Route>
-        </Switch>
+        <Switch>{routes.map((route, index) => (!props.connected && route.private ? <Login key={index} exact path={route.path} /> : <MatchedRoutes key={index} {...route} />))}</Switch>
         <Footer />
       </Router>
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    connected: state.user.connected,
+  };
+};
+
+App.propTypes = {
+  connected: PropTypes.bool.isRequired,
+};
+
+export default connect(mapStateToProps)(App);

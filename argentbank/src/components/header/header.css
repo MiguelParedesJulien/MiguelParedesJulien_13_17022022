@@ -1,28 +1,28 @@
+.fa-user-circle,
+.fa-sign-out-alt {
+  margin-right: 0.4rem;
+}
+
 .mainNav {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
+  padding: 0.3125rem 1.25rem;
 }
 
 .mainNav a {
-  font-weight: bold;
   color: #2c3e50;
-  text-decoration: none;
-  font-size: 25px;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .mainNav a.router-link-exact-active {
   color: #42b983;
 }
 
-.mainNav-item {
-  text-decoration: none;
+.mainNavItem {
   margin-right: 0.5rem;
-}
-
-.fa-user-circle {
-  margin-right: 0.4rem;
+  text-decoration: none;
 }
 
 .mainNavItem:hover {
@@ -30,11 +30,27 @@
 }
 
 .mainNavLogo {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .mainNavLogoImage {
   max-width: 100%;
-  width: 350px;
+  width: 20rem;
+}
+
+.navLog {
+  display: flex;
+}
+
+@media (max-width: 720px) {
+  .navLog {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+
+  .navLog div {
+    flex-direction: row;
+  }
 }

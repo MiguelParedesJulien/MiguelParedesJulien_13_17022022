@@ -1,5 +1,5 @@
 import Banner from "components/banner/Banner";
-import { FEATURES_CARDS_CONTENT } from "data/data";
+import { FEATURES_CARDS_CONTENT } from "services/dataProvider/data";
 import FeatureItem from "components/featureItem/FeatureItem";
 import React from "react";
 

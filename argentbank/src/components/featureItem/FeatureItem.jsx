@@ -1,18 +1,16 @@
 import "components/featureItem/featureItem.css";
 import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 
-function FeatureItem({ imgSrc, imgAlt, title, description }) {
+const FeatureItem = ({ imgSrc, imgAlt, title, description }) => {
   return (
-    <Fragment>
-      <article className="featureItem">
-        <img src={imgSrc} className="featureIcon" alt={imgAlt} />
-        <h3 className="featureItemTitle">{title}</h3>
-        <p>{description}</p>
-      </article>
-    </Fragment>
+    <article className="featureItem">
+      <img src={imgSrc} className="featureIcon" alt={imgAlt} />
+      <h3 className="featureItemTitle">{title}</h3>
+      <p>{description}</p>
+    </article>
   );
-}
+};
 
 FeatureItem.propTypes = {
   imgSrc: PropTypes.string.isRequired,
