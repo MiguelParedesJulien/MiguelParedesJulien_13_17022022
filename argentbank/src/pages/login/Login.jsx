@@ -2,7 +2,7 @@ import LoginForm from "components/loginForm/LoginForm";
 import "pages/login/login.css";
 import React from "react";
 
-function Login() {
+const Login = () => {
   return (
     <main className="main backgroundDark">
       <section className="signInContent">
@@ -12,6 +12,6 @@ function Login() {
       </section>
     </main>
   );
-}
+};
 
 export default Login;

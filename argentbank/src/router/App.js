@@ -6,12 +6,10 @@ import Login from "pages/login/Login";
 import LoginJWT from "utils/storage/LoginJWT";
 import PropTypes from "prop-types";
 import React from "react";
-import { routes, routesApiDocs } from "router/routes";
+import { routes } from "router/routes";
 import { SubRoutes } from "router/subRoutes";
 
-function App(props) {
-  // to establish the path to the API documentation
-  routesApiDocs();
+const App = (props) => {
   // to log in the user using the JWT Token
   LoginJWT();
 
@@ -24,7 +22,7 @@ function App(props) {
       </Router>
     </div>
   );
-}
+};
 
 const mapStateToProps = (state) => {
   return {

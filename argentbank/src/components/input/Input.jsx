@@ -2,9 +2,9 @@ import "components/input/input.css";
 import PropTypes from "prop-types";
 import React from "react";
 
-function Input({ className, type, placeholder, autoComplete, value, action }) {
+const Input = ({ className, type, placeholder, autoComplete, value, action }) => {
   return <input className={className} type={type} placeholder={placeholder} autoComplete={autoComplete} value={value} onChange={action} />;
-}
+};
 
 Input.propTypes = {
   className: PropTypes.string.isRequired,

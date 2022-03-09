@@ -3,7 +3,7 @@ import { FEATURES_CARDS_CONTENT } from "utils/data/data";
 import FeatureItem from "components/featureItem/FeatureItem";
 import React from "react";
 
-function Homepage() {
+const Homepage = () => {
   return (
     <main>
       <Banner />
@@ -15,6 +15,6 @@ function Homepage() {
       </section>
     </main>
   );
-}
+};
 
 export default Homepage;

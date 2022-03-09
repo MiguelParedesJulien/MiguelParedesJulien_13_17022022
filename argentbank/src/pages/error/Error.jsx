@@ -2,7 +2,7 @@ import Button from "components/button/Button";
 import { Link } from "react-router-dom";
 import "pages/error/error.css";
 
-function Error() {
+const Error = () => {
   return (
     <main className="error404Main">
       <section className="errorMessagesContainer">
@@ -18,6 +18,6 @@ function Error() {
       </section>
     </main>
   );
-}
+};
 
 export default Error;

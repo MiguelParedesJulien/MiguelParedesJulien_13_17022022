@@ -1,23 +1,26 @@
 import ApiProvider from "services/apiProvider/ApiProvider";
-import { logIn, setUser } from "utils/features/UserSlice";
+import { logIn, setUser, logOut } from "utils/features/UserSlice";
 import { useDispatch } from "react-redux";
 
 const LoginJWT = () => {
   const dispatch = useDispatch();
-  const jwtToken = localStorage.getItem("jwtToken");
 
-  async function logInUser(jwtToken) {
-    const response = await new ApiProvider().getUserProfile(jwtToken);
+  async function logInUser() {
+    const localJWToken = sessionStorage.getItem("jwtToken");
 
-    if (response.status === 200) {
-      dispatch(setUser(response.data.body));
-      dispatch(logIn(jwtToken));
+    if (localJWToken) {
+      const response = await new ApiProvider().getUserProfile(localJWToken);
+
+      if (response.status !== 200) {
+        dispatch(logOut());
+        sessionStorage.clear();
+      } else {
+        dispatch(logIn(localJWToken));
+        dispatch(setUser(response.data.body));
+      }
     }
   }
-
-  if (jwtToken) {
-    logInUser(jwtToken);
-  }
+  logInUser();
 };
 
 export default LoginJWT;

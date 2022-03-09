@@ -3,7 +3,7 @@ import "components/card/card.css";
 import PropTypes from "prop-types";
 import React from "react";
 
-function Card({ title, amount, description }) {
+const Card = ({ title, amount, description }) => {
   return (
     <section className="account">
       <div className="accountContentWrapper">
@@ -16,7 +16,7 @@ function Card({ title, amount, description }) {
       </div>
     </section>
   );
-}
+};
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,

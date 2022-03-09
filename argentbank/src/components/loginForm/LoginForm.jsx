@@ -15,7 +15,6 @@ const LoginForm = () => {
   const [remember, setRemember] = useState(getLocalStorageKey("rememberUser", false));
   let history = useHistory();
   const dispatch = useDispatch();
-
   /**
    * Send the data to the ApiProvider, which will execute a POST request to the ArgentBank API on Submit
    * If the authentication is correct the user is redirected to his '/profile' page
