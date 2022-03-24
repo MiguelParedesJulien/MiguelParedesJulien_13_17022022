@@ -39,7 +39,7 @@ paths:
     get:
       tags:
         - User Accounts Transactions
-      summary: Transactions for the selected account
+      summary: Transactions for the selected account - view all transactions of current month.
       description: Get account transactions
       operationId: userTransaction
       consumes:
@@ -109,7 +109,7 @@ paths:
     put:
       tags:
         - User Account Transactions Details
-      summary: Update transaction details
+      summary: Update transaction details - add, modify or delete information about a transaction
       description: Update details for the selected transaction
       operationId: userTransactionDetailUpdate
       consumes:
